@@ -6,17 +6,17 @@ class MeetingEntriesController < ApplicationController
   def create
     @meeting_entry = MeetingEntry.new(meeting_entry_params)
 
-    respond_to do |format|
-      if @meeting_entry.save
-        format.html { redirect_to root_path, notice: 'Meeting entry was successfully created.' }
-      else
-        format.html { redirect_to root_path }
-        format.json { render json: @meeting_entry.errors, status: :unprocessable_entity }
-      end
+    if @meeting_entry.save
+      redirect_to meeting_entries_confirmation_path
+    else
+      redirect_to root_path
     end
   end
 
   def agreement
+  end
+
+  def confirmation
   end
 
   private
