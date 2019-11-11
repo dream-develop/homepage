@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2019_11_11_041425) do
   end
 
   create_table "meetings", force: :cascade do |t|
-    t.datetime "start_time", null: false
+    t.datetime "start_time", default: "2019-11-11 00:00:00", null: false
     t.datetime "end_time"
     t.boolean "display", default: true, null: false
     t.boolean "open", default: true, null: false
