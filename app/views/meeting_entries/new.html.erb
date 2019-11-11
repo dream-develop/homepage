@@ -18,10 +18,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :meeting_id %>
-    <%= form.number_field :meeting_id %>
-  </div>
+  <% @meetings.each do |meeting|  %>
+    <% if meeting.open%>
+      <label><%= form.radio_button :meeting_id, meeting.id%><%= meeting.start_time.strftime("%Y年%-m月%-d日 %-H時%-M分")%></label>
+    <% else %>
+      <label><%= form.radio_button :meeting_id, meeting.id, :disabled => true%><del><%= meeting.start_time.strftime("%Y年%-m月%-d日 %-H時%-M分")%></del></label>
+    <% end %>
+    <br>
+  <% end %>
+
 
   <div class="field">
     <%= form.label :family_name %>

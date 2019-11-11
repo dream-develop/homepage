@@ -1,6 +1,7 @@
 class MeetingEntriesController < ApplicationController
   def new
     @meeting_entry = MeetingEntry.new
+    @meetings = Meeting.where(display: true)
   end
 
   def create
