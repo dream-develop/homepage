@@ -1,4 +1,8 @@
 class QuestionsController < ApplicationController
+  def index
+    redirect_to new_question_path
+  end
+
   def new
     @question = Question.new
   end
@@ -9,7 +13,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to questions_confirmation_path
     else
-      redirect_to new_question_path
+      render :new
     end
   end
 

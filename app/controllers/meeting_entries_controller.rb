@@ -1,4 +1,8 @@
 class MeetingEntriesController < ApplicationController
+  def index
+    redirect_to new_meeting_entry_path
+  end
+
   def new
     @meeting_entry = MeetingEntry.new
     @meetings = Meeting.where(display: true)

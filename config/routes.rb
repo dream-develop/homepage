@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root "root#index"
-  resources :meeting_entries, only: [:new, :create]
+  resources :meeting_entries, only: [:index, :new, :create]
   get "meeting_entries/agreement" => "meeting_entries#agreement"
   get "meeting_entries/confirmation" => "meeting_entries#confirmation"
-  resources :questions, only: [:new, :create]
+  resources :questions, only: [:index, :new, :create]
   get "questions/agreement" => "questions#agreement"
   get "questions/confirmation" => "questions#confirmation"
 

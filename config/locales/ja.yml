@@ -1,0 +1,25 @@
+ja:
+  activerecord:
+    models:
+      meetings: 説明会の日程
+    attributes:
+      meeting_entry:
+        meeting_id: 説明会の日程
+        family_name: 姓（漢字）
+        first_name: 名（漢字）
+        family_kana: 姓（カナ）
+        first_kana: 名（カナ）
+        phone: 電話番号
+        email: メールアドレス
+        purpose: 説明会参加の目的
+        note: 備考欄
+        agreement: 利用規約
+      question:
+        family_name: 姓（漢字）
+        first_name: 名（漢字）
+        family_kana: 姓（カナ）
+        first_kana: 名（カナ）
+        phone: 電話番号
+        email: メールアドレス
+        content: お問い合わせの内容
+        agreement: 利用規約
