@@ -16,4 +16,14 @@ ActiveAdmin.register Meeting do
   # end
 
   permit_params :start_time, :end_time, :display, :open
+
+  form do |f|
+    f.inputs do
+      f.input :start_time, as: :datetime_picker
+      f.input :end_time, as: :datetime_picker
+      f.input :display
+      f.input :open
+    end
+    f.actions
+  end
 end
