@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   root "root#index"
   resources :meeting_entries, only: [:new, :create]
   get "meeting_entries/agreement" => "meeting_entries#agreement"
+  get "meeting_entries/confirmation" => "meeting_entries#confirmation"
   resources :questions, only: [:new, :create]
   get "questions/agreement" => "questions#agreement"
+  get "questions/confirmation" => "questions#confirmation"
+
 
   get 'questions/new'
   get 'questions/agreement'
