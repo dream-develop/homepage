@@ -10,7 +10,8 @@ class MeetingEntriesController < ApplicationController
     if @meeting_entry.save
       redirect_to meeting_entries_confirmation_path
     else
-      redirect_to root_path
+      @meetings = Meeting.where(display: true)
+      render :new
     end
   end
 

@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to questions_confirmation_path
     else
-      redirect_to root_path
+      redirect_to new_question_path
     end
   end
 
